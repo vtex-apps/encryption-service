@@ -48,8 +48,6 @@ btoa = function(str:any){ return Buffer.from(str, 'binary').toString('base64'); 
     let chiperRaw = this.atob(chiperData.toString());
 
     let data = this.profitshareBin2hex(this.btoa(iv + hmac + chiperRaw)); 
-    console.log('Plain text: ', encodedPlainText);
-    console.log('Data: ', data)
     
     return data
   }

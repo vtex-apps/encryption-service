@@ -5,7 +5,6 @@ export async function encryption(ctx: Context, next: () => Promise<any>) {
 
   try {
     const data = encryption.getEncryption(ctx.request.query.plaintext, ctx.request.query.key)    
-    console.log('data: ', data);
     ctx.status = 201
     ctx.body = data
   } catch (error) {
